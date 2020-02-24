@@ -1,0 +1,26 @@
+{
+  "name": "markdown-it-super-header",
+  "version": "1.0.0",
+  "description": "markdown-it plugin for head attrs,such as id or class",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yuhongda0315/markdown-it-super-header.git"
+  },
+  "keywords": [
+    "markdown-it",
+    "markdown-it-plugin",
+    "header",
+    "attr",
+    "super"
+  ],
+  "author": "yuhongda0315@163.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yuhongda0315/markdown-it-super-header/issues"
+  },
+  "homepage": "https://github.com/yuhongda0315/markdown-it-super-header#readme"
+}
