@@ -19,7 +19,7 @@ module.exports = function (md, options) {
               child.attrs = attrs.map((attr) => {
                 if (attr[0] == 'href') {
                   var value = attr[1];
-                  var href = value.replace(/[^\x00-\xff]+\-/, '');
+                  var href = value.replace(/[^\x00-\xff]+[0-9]+\-/, '');
                   attr[1] = href || value;
                 }
                 return attr;
@@ -69,7 +69,11 @@ module.exports = function (md, options) {
     var matches = name.match(CONTENT_REG) || [];
     var selector = matches[1];
     if (!selector) {
-      return;
+      selector = name.split('#')[1];
+      if(!selector){
+        return;
+      }
+      selector = '#' + selector;
     }
     var type = selector.substr(0, 1);
     var attr_v = selector.substr(1);
