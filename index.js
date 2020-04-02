@@ -19,7 +19,7 @@ module.exports = function (md, options) {
               child.attrs = attrs.map((attr) => {
                 if (attr[0] == 'href') {
                   var value = attr[1];
-                  var href = value.replace(/[^\x00-\xff]+[0-9]+\-/, '');
+                  var href = value.replace(/([^\x00-\xff]+|[^\x00-\xff]+[0-9]+)\-/, '');
                   attr[1] = href || value;
                 }
                 return attr;
